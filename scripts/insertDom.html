@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Dom</title>
+    <style>
+        article{
+            border: 2px solid black;
+            border-radius: 20px;
+            margin:5px;
+            padding: 5px;
+        }
+        .special h3{
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section> 
+            <h3>Exploring Dom</h3>
+            <article id="first-article">
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias consequatur dolore amet deleniti distinctio illo assumenda saepe voluptatibus rerum necessitatibus minus, facilis animi quae voluptas. Non nulla vitae doloremque totam?</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Facere molestias velit aspernatur quae, tenetur rerum quidem fugiat corrupti itaque atque eos consequuntur fugit expedita vel assumenda non! Alias iusto rerum ut quis molestias placeat autem natus nisi ratione.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Deserunt dicta vero consectetur? Perferendis itaque, temporibus laudantium ullam possimus maxime illum. Iste ad aspernatur, reprehenderit repudiandae a aliquam in sapiente nesciunt magni accusantium ipsum illum. Quo, qui vitae? Perferendis?</p>
+            </article>
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>git-item-1</li>
+                    <li>git-item-2</li>
+                    <li>git-item-3</li>
+                    <li>git-item-4</li>
+                    <li>git-item-5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+      const article = document.getElementById('first-article');
+      const newParagraph = document.createElement('p');
+      newParagraph.innerHTML = 'This added by js';
+      article.appendChild(newParagraph);
+
+      //adding one more git item
+
+      const ul = document.getElementById('gift-list');
+      const li = document.createElement('li');
+      li.innerHTML='Brand new gift';
+      ul.appendChild(li);  
+    </script>
+</body>
+</html>
